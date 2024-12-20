@@ -1,0 +1,48 @@
+﻿<Window x:Class="Tetris.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Tetris"
+        WindowState="Maximized"
+        WindowStyle="None"
+        KeyDown="Window_KeyDown">
+    <Window.Background>
+        <ImageBrush ImageSource="C:\Users\Sofia\source\repos\WpfApp2\WpfApp2\images\im.jpg" Stretch="UniformToFill" /> <!-- если не работате удалите пожалуйста бэкграуд и он заработает без фона -->
+    </Window.Background>
+
+    <Grid Background="Transparent">
+        <Canvas Name="GameCanvas"
+                Background="black"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"/>
+        <StackPanel Orientation="Vertical"
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Top"
+                    Margin="20"
+                    Background="#80000000">
+            <!-- Полупрозрачный фон для кнопок -->
+            <TextBlock Name="ScoreLabel"
+                       FontSize="24"
+                       Foreground="White"
+                       Margin="5"
+                       Text="Score: 0"/>
+            <Button Content="Начать игру"
+                    Click="StartGame_Click"
+                    Width="150"
+                    Height="50"
+                    Margin="5"
+                    FontSize="16"/>
+            <Button Content="Помощь"
+                    Click="HelpButton_Click"
+                    Width="150"
+                    Height="50"
+                    Margin="5"
+                    FontSize="16"/>
+            <Button Content="Выход"
+                    Click="ExitButton_Click"
+                    Width="150"
+                    Height="50"
+                    Margin="5"
+                    FontSize="16"/>
+        </StackPanel>
+    </Grid>
+</Window>
